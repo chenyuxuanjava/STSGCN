@@ -8,7 +8,7 @@ url: paper/AAAI2020-STSGCN.pdf
 
 Docker is recommended.
 # 安装docker
-**上官网下载**
+**参照官网安装*
 
 https://docs.docker.com/engine/install/centos/
 **1.卸载之前的版本**
@@ -22,7 +22,19 @@ https://docs.docker.com/engine/install/centos/
       docker-logrotate \
       docker-engine
   ```
-
+  **注意这里有的人会报错，是因为python版本问题，可以卸载python3**
+  **2.安装需要的yum**
+  ```
+  yum install -y yum-utils
+  ```
+  **3.安装一下使用国内镜像**
+  ```
+  yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
+  ```
+  **4.安装docker镜像，中间需要点几下 y**
+  ```
+  yum install docker-ce docker-ce-cli containerd.io
+  ```
 1. install docker
 2. install nvidia-docker
 3. build image using `cd docker && docker build -t stsgcn/mxnet_1.41_cu100 .`
