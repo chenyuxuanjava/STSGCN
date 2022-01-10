@@ -7,6 +7,10 @@ url: paper/AAAI2020-STSGCN.pdf
 # Usage
 
 Docker is recommended.
+# 安装docker
+**上官网下载**
+
+https://docs.docker.com/engine/install/centos/
 
 1. install docker
 2. install nvidia-docker
