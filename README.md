@@ -11,6 +11,17 @@ Docker is recommended.
 **上官网下载**
 
 https://docs.docker.com/engine/install/centos/
+**1.卸载之前的版本**
+```
+      yum remove docker \
+      docker-client \
+      docker-client-latest \
+      docker-common \
+      docker-latest \
+      docker-latest-logrotate \
+      docker-logrotate \
+      docker-engine
+  ```
 
 1. install docker
 2. install nvidia-docker
