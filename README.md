@@ -35,7 +35,7 @@ https://docs.docker.com/engine/install/centos/
   ```
   yum install docker-ce docker-ce-cli containerd.io
   ```
-1. install docker
+1. install docker（上面安装docker已经完成）
 2. install nvidia-docker
 3. build image using `cd docker && docker build -t stsgcn/mxnet_1.41_cu100 .`
 4. download the data [STSGCN_data.tar.gz](https://pan.baidu.com/s/1ZPIiOM__r1TRlmY4YGlolw) with code: `p72z`
