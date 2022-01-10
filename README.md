@@ -1,3 +1,4 @@
+#这个是由北京交通大学共享的内容，本人自己进行部署
 # STSGCN
 AAAI 2020. Spatial-Temporal Synchronous Graph Convolutional Networks: A New Framework for Spatial-Temporal Network Data Forecasting
 
