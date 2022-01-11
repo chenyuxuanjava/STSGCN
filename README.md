@@ -11,6 +11,7 @@ Docker is recommended.
 **参照官网安装*
 
 https://docs.docker.com/engine/install/centos/
+
 **1.卸载之前的版本**
 ```
       yum remove docker \
