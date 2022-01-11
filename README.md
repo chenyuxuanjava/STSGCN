@@ -38,6 +38,7 @@ https://docs.docker.com/engine/install/centos/
   ```
 
 #安装nvidia-docker
+
 **步骤一**
 ```
 yum install kernel-devel gcc -y
@@ -47,6 +48,7 @@ yum install kernel-devel gcc -y
 ls /boot | grep vmlinu
 rpm -aq | grep kernel-devel
 ```
+<img width="328" alt="1" src="https://user-images.githubusercontent.com/36155175/148874166-58c09459-fcfd-41db-9233-06b5ae4eeb35.png">
 
 1. install docker（上面安装docker已经完成）
 2. install nvidia-docker
