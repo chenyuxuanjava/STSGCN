@@ -37,7 +37,7 @@ https://docs.docker.com/engine/install/centos/
   yum install docker-ce docker-ce-cli containerd.io
   ```
 
-#安装nvidia-docker
+#安装nvidia-docker，首先需要安装nvdia驱动
 
 **步骤一**
 ```
@@ -49,6 +49,12 @@ ls /boot | grep vmlinu
 rpm -aq | grep kernel-devel
 ```
 <img width="328" alt="1" src="https://user-images.githubusercontent.com/36155175/148874166-58c09459-fcfd-41db-9233-06b5ae4eeb35.png">
+**步骤三，屏蔽系统自带的nouveau**
+```
+lsmod | grep nouveau
+```
+如果什么都没有就直接跳过步骤三，如果有内容需要执行下面内容
+![image](https://user-images.githubusercontent.com/36155175/148874333-230d87fa-4e80-445a-a203-d8edfd6dcffd.png)
 
 1. install docker（上面安装docker已经完成）
 2. install nvidia-docker
