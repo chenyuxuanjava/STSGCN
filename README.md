@@ -65,11 +65,21 @@ lsmod | grep nouveau
 vim /lib/modprobe.d/dist-blacklist.conf
 ```
 
+
+
 将nvidiafb注释掉:
 #blacklist nvidiafb 
 然后添加以下语句：
 blacklist nouveau
 options nouveau modeset=0
+
+
+
+**步骤四：重建initramfs image**
+```
+mv /boot/initramfs-$(uname -r).img /boot/initramfs-$(uname -r).img.bak
+dracut /boot/initramfs-$(uname -r).img $(uname -r)
+```
 
 
 1. install docker（上面安装docker已经完成）
