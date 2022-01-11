@@ -49,7 +49,9 @@ ls /boot | grep vmlinu
 rpm -aq | grep kernel-devel
 ```
 <img width="328" alt="1" src="https://user-images.githubusercontent.com/36155175/148874166-58c09459-fcfd-41db-9233-06b5ae4eeb35.png">
+
 **步骤三，屏蔽系统自带的nouveau**
+
 ```
 lsmod | grep nouveau
 ```
@@ -58,9 +60,11 @@ lsmod | grep nouveau
 <img width="269" alt="1" src="https://user-images.githubusercontent.com/36155175/148874492-58a1da50-7700-44a1-9813-24cb28287c5d.png">
 
 修改dist-blacklist.conf文件
+
 ```
 vim /lib/modprobe.d/dist-blacklist.conf
 ```
+
 将nvidiafb注释掉:
 #blacklist nvidiafb 
 然后添加以下语句：
