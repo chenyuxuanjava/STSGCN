@@ -113,13 +113,20 @@ chmod +x NVIDIA-Linux-x86_64-470.94.run
 如果这里面报错，执行的时候需要添加--kernel-source-path
 
 如果报此错：unable to load the kernel module 'nvidia.ko' .........
+```
 执行：./NVIDIA-XXXX.run --kernel-source-path=/usr/src/kernels/内核号  -k $(uname -r)
+```
 
 如果报此错： WARNING: You do not appear to have an NVIDIA GPU supported by the 430.34 NVIDIA Linux graph 
+```
 加上：--add-this-kernel 参数
+```
+
 
 如果报此错： unable to find the kernel source tree for the currently running kernel......... 
+```
 加上：--kernel-source-path=/usr/src/kernels/内核号(2+Tab键  自动出现)
+```
 
 
 ```
