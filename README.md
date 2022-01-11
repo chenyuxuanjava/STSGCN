@@ -36,6 +36,18 @@ https://docs.docker.com/engine/install/centos/
   ```
   yum install docker-ce docker-ce-cli containerd.io
   ```
+
+#安装nvidia-docker
+**步骤一**
+```
+yum install kernel-devel gcc -y
+```
+**步骤二，保证两个版本一样**
+```
+ls /boot | grep vmlinu
+rpm -aq | grep kernel-devel
+```
+
 1. install docker（上面安装docker已经完成）
 2. install nvidia-docker
 3. build image using `cd docker && docker build -t stsgcn/mxnet_1.41_cu100 .`
