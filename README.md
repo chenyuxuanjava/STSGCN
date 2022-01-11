@@ -53,8 +53,20 @@ rpm -aq | grep kernel-devel
 ```
 lsmod | grep nouveau
 ```
+
 如果什么都没有就直接跳过步骤三，如果有内容需要执行下面内容
-![image](https://user-images.githubusercontent.com/36155175/148874333-230d87fa-4e80-445a-a203-d8edfd6dcffd.png)
+<img width="269" alt="1" src="https://user-images.githubusercontent.com/36155175/148874492-58a1da50-7700-44a1-9813-24cb28287c5d.png">
+
+修改dist-blacklist.conf文件
+```
+vim /lib/modprobe.d/dist-blacklist.conf
+```
+将nvidiafb注释掉:
+#blacklist nvidiafb 
+然后添加以下语句：
+blacklist nouveau
+options nouveau modeset=0
+
 
 1. install docker（上面安装docker已经完成）
 2. install nvidia-docker
