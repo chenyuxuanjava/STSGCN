@@ -48,6 +48,7 @@ yum install kernel-devel gcc -y
 ls /boot | grep vmlinu
 rpm -aq | grep kernel-devel
 ```
+
 <img width="328" alt="1" src="https://user-images.githubusercontent.com/36155175/148874166-58c09459-fcfd-41db-9233-06b5ae4eeb35.png">
 
 **步骤三，屏蔽系统自带的nouveau**
@@ -57,6 +58,7 @@ lsmod | grep nouveau
 ```
 
 如果什么都没有就直接跳过步骤三，如果有内容需要执行下面内容
+
 <img width="269" alt="1" src="https://user-images.githubusercontent.com/36155175/148874492-58a1da50-7700-44a1-9813-24cb28287c5d.png">
 
 修改dist-blacklist.conf文件
@@ -94,7 +96,36 @@ reboot
 
 **步骤七：需要到官网上面下载驱动**
 https://www.nvidia.cn/Download/index.aspx?lang=cn
+
 <img width="332" alt="1" src="https://user-images.githubusercontent.com/36155175/148875271-96d2e914-4a9c-45af-b3cf-349821fd3e1e.png">
+
+**步骤八：给安装包权限**
+
+```
+chmod +x NVIDIA-Linux-x86_64-470.94.run
+```
+
+**步骤九：执行安装包**
+
+```
+./NVIDIA-Linux-x86_64-470.94.run
+```
+如果这里面报错，执行的时候需要添加--kernel-source-path
+
+如果报此错：unable to load the kernel module 'nvidia.ko' .........
+执行：./NVIDIA-XXXX.run --kernel-source-path=/usr/src/kernels/内核号  -k $(uname -r)
+
+如果报此错： WARNING: You do not appear to have an NVIDIA GPU supported by the 430.34 NVIDIA Linux graph 
+加上：--add-this-kernel 参数
+
+如果报此错： unable to find the kernel source tree for the currently running kernel......... 
+加上：--kernel-source-path=/usr/src/kernels/内核号(2+Tab键  自动出现)
+
+
+```
+./NVIDIA-Linux-x86_64-440.64.run --kernel-source-path=/usr/src/kernels/3.10.0-1062.18.1.el7.x86_64 -k $(uname -r)
+```
+
 
 
 1. install docker（上面安装docker已经完成）
