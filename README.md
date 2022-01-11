@@ -92,6 +92,10 @@ systemctl set-default multi-user.target
 reboot
 ```
 
+**步骤七：需要到官网上面下载驱动**
+https://www.nvidia.cn/Download/index.aspx?lang=cn
+<img width="332" alt="1" src="https://user-images.githubusercontent.com/36155175/148875271-96d2e914-4a9c-45af-b3cf-349821fd3e1e.png">
+
 
 1. install docker（上面安装docker已经完成）
 2. install nvidia-docker
