@@ -37,7 +37,7 @@ https://docs.docker.com/engine/install/centos/
   yum install docker-ce docker-ce-cli containerd.io
   ```
 
-#安装nvidia-docker，首先需要安装nvdia驱动
+# 安装nvidia-docker，首先需要安装nvdia驱动
 
 **步骤一**
 ```
