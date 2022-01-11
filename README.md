@@ -81,6 +81,17 @@ mv /boot/initramfs-$(uname -r).img /boot/initramfs-$(uname -r).img.bak
 dracut /boot/initramfs-$(uname -r).img $(uname -r)
 ```
 
+**步骤五：修改运行级别为文本模式**
+
+```
+systemctl set-default multi-user.target
+```
+
+**步骤六：重启**
+```
+reboot
+```
+
 
 1. install docker（上面安装docker已经完成）
 2. install nvidia-docker
