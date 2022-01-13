@@ -5,7 +5,7 @@ AAAI 2020. Spatial-Temporal Synchronous Graph Convolutional Networks: A New Fram
 url: paper/AAAI2020-STSGCN.pdf
 
 # Usage
-
+# 本人在虚拟机上面驱动安装没有成功，不知道是否虚拟机上面不支持，希望有大佬能够给虚拟上面Linux安装驱动的教程
 Docker is recommended.
 # 安装docker
 **参照官网安装*
